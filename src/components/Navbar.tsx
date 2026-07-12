@@ -24,7 +24,7 @@ export default function Navbar({ activeSection, setActiveSection }: NavbarProps)
     { id: 'hero', label: 'Home' },
     { id: 'role-explorer', label: 'Role Matcher' },
     { id: 'projects', label: 'Projects' },
-    { id: 'skills', label: 'Skills & DSA' },
+    { id: 'skills', label: 'Skills' },
     { id: 'experience', label: 'Experience' },
     { id: 'certifications', label: 'Certifications' },
     { id: 'contact', label: 'Contact' },
