@@ -68,6 +68,20 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS: Project[] = [
   {
+    id: "stockflow",
+    title: "StockFlow",
+    subtitle: "Multi-Tenant Business Management & AI Assistant Platform",
+    description: "A full-stack, multi-tenant business management and CRM platform featuring secure per-user data isolation and an LLM-powered assistant for natural-language live transactional queries.",
+    bullets: [
+      "Architected a full-stack, multi-tenant business management platform (Flask, PostgreSQL, SQLAlchemy) with secure authentication and isolated per-user data, replacing manual tracking.",
+      "Integrated an LLM-powered business assistant (Claude via OpenRouter) with retrieval-grounded responses over live transactional data, enabling natural-language queries against real-time records.",
+      "Containerized with Docker and deployed across dual pipelines (Render, Vercel serverless) with geolocation-based CRM (Leaflet.js) and a responsive analytics dashboard (Chart.js)."
+    ],
+    tags: ["Python", "Flask", "PostgreSQL", "Docker", "LLM Integration", "SQLAlchemy", "Leaflet.js", "Chart.js"],
+    liveUrl: "http://stockflow-tradehelp.vercel.app",
+    category: ["Backend", "ML", "Frontend"]
+  },
+  {
     id: "solariq",
     title: "SolarIQ",
     subtitle: "Intelligent Energy Optimization & Monitoring Platform",
@@ -80,6 +94,19 @@ export const PROJECTS: Project[] = [
     tags: ["Python", "Machine Learning", "Data Analytics", "Web Technologies", "Predictive Modeling"],
     githubUrl: "https://github.com/SIDDARTHKHANAGANNI/Solar-IQ.git",
     category: ["ML", "Backend"]
+  },
+  {
+    id: "fraud_detection",
+    title: "Fraud Detection using ML",
+    subtitle: "Supervised Transaction Classification Pipeline",
+    description: "A comprehensive supervised machine learning pipeline to flag fraudulent transactions on highly imbalanced transaction datasets.",
+    bullets: [
+      "Built a robust ML pipeline applying advanced resampling techniques (SMOTE/oversampling) to handle imbalanced transaction data and boost minority-class recall.",
+      "Engineered high-signal features from transactional patterns and trained multiple classification models including Logistic Regression and Random Forest.",
+      "Tuned decision thresholds to optimize the precision-recall curve and minimize false negatives, ensuring reliability for real-world deployment."
+    ],
+    tags: ["Python", "Machine Learning", "Scikit-learn", "Pandas", "Data Analytics", "Feature Engineering"],
+    category: ["ML"]
   },
   {
     id: "carbonflow",
@@ -107,19 +134,6 @@ export const PROJECTS: Project[] = [
     ],
     tags: ["C++", "IoT", "MQ Sensors", "Flame Detection", "Blynk", "Embedded Systems"],
     category: ["IoT", "Backend"]
-  },
-  {
-    id: "fraud_detection",
-    title: "Fraud Detection using ML",
-    subtitle: "Supervised Transaction Classification Pipeline",
-    description: "A comprehensive supervised machine learning pipeline to flag fraudulent transactions on highly imbalanced transaction datasets.",
-    bullets: [
-      "Built a robust ML pipeline applying advanced resampling techniques (SMOTE/oversampling) to handle imbalanced transaction data and boost minority-class recall.",
-      "Engineered high-signal features from transactional patterns and trained multiple classification models including Logistic Regression and Random Forest.",
-      "Tuned decision thresholds to optimize the precision-recall curve and minimize false negatives, ensuring reliability for real-world deployment."
-    ],
-    tags: ["Python", "Machine Learning", "Scikit-learn", "Pandas", "Data Analytics", "Feature Engineering"],
-    category: ["ML"]
   }
 ];
 
@@ -199,7 +213,7 @@ export const ROLES: Record<string, RoleDetail> = {
       "Full-stack capabilities, bridging hardware (IoT), backend (Flask/Express), and beautiful frontends.",
       "Solid understanding of computer networking, containerization, and clean code principles."
     ],
-    relevantProjects: ["carbonflow", "solariq", "gassensor"]
+    relevantProjects: ["stockflow", "carbonflow", "solariq", "gassensor"]
   },
   backend: {
     title: "Backend Engineer",
@@ -211,7 +225,7 @@ export const ROLES: Record<string, RoleDetail> = {
       "Engineered custom heuristic battery sizing and grid emission calculations in CarbonFlow.",
       "Proficient in system containerization (Docker, Kubernetes) and API development."
     ],
-    relevantProjects: ["solariq", "carbonflow", "gassensor"]
+    relevantProjects: ["stockflow", "solariq", "carbonflow", "gassensor"]
   },
   frontend: {
     title: "Frontend Engineer",
@@ -223,7 +237,7 @@ export const ROLES: Record<string, RoleDetail> = {
       "Developed dynamic dashboards for SolarIQ with approximately 40% reduction in anomaly response times.",
       "Passionate about interactive UI design, motion graphics, and high visual accessibility."
     ],
-    relevantProjects: ["carbonflow", "solariq"]
+    relevantProjects: ["stockflow", "carbonflow", "solariq"]
   },
   ml: {
     title: "Machine Learning Engineer",
@@ -235,6 +249,6 @@ export const ROLES: Record<string, RoleDetail> = {
       "Built an AI-assisted energy optimization platform (SolarIQ) validating real campus energy data with 28-32% wastage reduction.",
       "Developed a complete ML transaction fraud detection pipeline optimized for highly imbalanced data."
     ],
-    relevantProjects: ["solariq", "fraud_detection"]
+    relevantProjects: ["stockflow", "solariq", "fraud_detection"]
   }
 };
